@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/automobile_image"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="50dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/automobile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/automobile_image"
+        android:layout_marginStart="100dp"
+        android:layout_toRightOf="@id/automobile_image"
+        android:text="Ferrari"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/automobile_author"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/automobile_image"
+        android:layout_marginStart="100dp"
+        android:layout_alignBottom="@id/automobile_image"
+        android:text="Author: Davis" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/automobile_image"/>
+
+</RelativeLayout>

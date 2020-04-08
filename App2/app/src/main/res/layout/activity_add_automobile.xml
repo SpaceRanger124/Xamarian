@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light" >
+
+    <TextView
+        android:id="@+id/add_automobile_label"
+        android:text="Add automobile"
+        android:textSize="32dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/name_label"
+        android:text="name:"
+        android:textSize="28dp"
+        android:textStyle="italic"
+        android:layout_below="@id/add_automobile_label"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/name"
+        android:text=""
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@android:color/white"
+        android:layout_below="@id/name_label"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/producer_label"
+        android:text="producer:"
+        android:textSize="28dp"
+        android:textStyle="italic"
+        android:layout_below="@id/name"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/producer"
+        android:text=""
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@android:color/white"
+        android:layout_below="@id/producer_label"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_below="@id/producer"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/submit"
+            android:text="Submit"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:text="Cancel"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</RelativeLayout>
