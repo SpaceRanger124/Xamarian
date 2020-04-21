@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/automobiles_label"
+        android:textColor="@android:color/white"
+        android:text="Automobiles"
+        android:textSize="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_below="@id/automobiles_label"
+        android:layout_height="300dp"
+        android:id="@+id/automobiles_list" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_below="@id/automobiles_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/remove_selected_button"
+            android:text="Remove selected"
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/add_new_button"
+            android:text="Add new"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</RelativeLayout>

@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".automobiles.AutomobilesActivity" />
+        <activity android:name=".sales.SaleActivity" />
+        <activity android:name=".automobiles.AutomobileActivity" />
+        <activity android:name=".producers.ProducerActivity" />
+        <activity android:name=".producers.ProducersActivity" />
+        <activity android:name=".sales.SalesActivity" />
+        <activity android:name=".automobiles.AddAutomobileActivity" />
+        <activity android:name=".producers.AddProducerActivity" />
+        <activity android:name=".sales.AddSaleActivity" />
+        <activity android:name=".RequestActivity" />
     </application>
 
 </manifest>

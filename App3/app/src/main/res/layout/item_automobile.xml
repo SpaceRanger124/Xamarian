@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/automobile_image"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="50dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/automobile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/automobile_image"
+        android:layout_marginStart="100dp"
+        android:layout_toRightOf="@id/automobile_image"
+        android:text="Ferrari"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/automobile_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/automobile_name"
+        android:layout_marginStart="100dp"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/automobile_image"
+        android:text="Author: Davis" />
+
+    <TextView
+        android:id="@+id/phone_number"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:text="Phone number: 375338888888"
+        android:layout_below="@id/automobile_author"
+        android:layout_marginStart="100dp"
+        android:layout_toRightOf="@id/automobile_image"
+        android:layout_marginTop="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/email"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/automobile_image"
+        android:layout_marginStart="100dp"
+        android:layout_alignBottom="@id/automobile_image"
+        android:text="Email: aa@a.reu" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/automobile_image"/>
+
+</RelativeLayout>
