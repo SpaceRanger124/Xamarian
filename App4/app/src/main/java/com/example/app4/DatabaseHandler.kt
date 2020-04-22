@@ -70,7 +70,15 @@ class DatabaseHandler(context: Context):
 
     override fun editAutomobile(automobile: Automobile) {
         var automobiles = getAllAutomobiles()
-        automobiles.removeIf { it.id == automobile.id }
+        var oldAuto: Automobile? = null
+        automobiles.forEach {
+            if (it.id == automobile.id) {
+                oldAuto = it
+            }
+        }
+        if (oldAuto != null) {
+            automobiles.remove(oldAuto as Automobile)
+        }
         automobiles.add(automobile)
         val clearQuery = "DELETE FROM " + TABLE_AUTOMOBILES
         val db = this.writableDatabase
@@ -93,7 +101,15 @@ class DatabaseHandler(context: Context):
 
     override fun editProducer(producer: Producer) {
         var producers = getAllProducers()
-        producers.removeIf { it.id == producer.id }
+        var oldProducer: Producer? = null
+        producers.forEach {
+            if (it.id == producer.id) {
+                oldProducer = it
+            }
+        }
+        if (oldProducer != null) {
+            producers.remove(oldProducer as Producer)
+        }
         producers.add(producer)
         val clearQuery = "DELETE FROM " + TABLE_PRODUCERS
         val db = this.writableDatabase
@@ -105,7 +121,15 @@ class DatabaseHandler(context: Context):
 
     override fun editSale(sale: Sale) {
         var sales = getAllSales()
-        sales.removeIf { it.id == sale.id }
+        var oldSale: Sale? = null
+        sales.forEach {
+            if (it.id == sale.id) {
+                oldSale = it
+            }
+        }
+        if (oldSale != null) {
+            sales.remove(oldSale as Sale)
+        }
         sales.add(sale)
         val clearQuery = "DELETE FROM " + TABLE_SALES
         val db = this.writableDatabase
@@ -117,7 +141,13 @@ class DatabaseHandler(context: Context):
 
     override fun removeAutomobile(automobile: Automobile) {
         var automobiles = getAllAutomobiles()
-        automobiles.removeIf { it.id == automobile.id }
+        var oldAutomobile: Automobile? = null
+        automobiles.forEach {
+            if (it.id == automobile.id) {
+                oldAutomobile = it
+            }
+        }
+        automobiles.remove(oldAutomobile)
         val clearQuery = "DELETE FROM " + TABLE_AUTOMOBILES
         val db = this.writableDatabase
         db.execSQL(clearQuery)
@@ -128,7 +158,13 @@ class DatabaseHandler(context: Context):
 
     override fun removeProducer(producer: Producer) {
         var producers = getAllProducers()
-        producers.removeIf { it.id == producer.id }
+        var oldProducer: Producer? = null
+        producers.forEach {
+            if (it.id == producer.id) {
+                oldProducer = it
+            }
+        }
+        producers.remove(oldProducer)
         val clearQuery = "DELETE FROM " + TABLE_PRODUCERS
         val db = this.writableDatabase
         db.execSQL(clearQuery)
@@ -139,7 +175,13 @@ class DatabaseHandler(context: Context):
 
     override fun removeSale(sale: Sale) {
         var sales = getAllSales()
-        sales.removeIf { it.id == sale.id }
+        var oldSale: Sale? = null
+        sales.forEach {
+            if (it.id == sale.id) {
+                oldSale = it
+            }
+        }
+        sales.remove(oldSale)
         val clearQuery = "DELETE FROM " + TABLE_SALES
         val db = this.writableDatabase
         db.execSQL(clearQuery)

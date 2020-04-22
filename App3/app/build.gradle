@@ -10,10 +10,28 @@ kapt {
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    signingConfigs {
+        debug {
+            storePassword 'mypasswd'
+            keyAlias = 'key1'
+            keyPassword 'mypasswd'
+            storeFile file('C:\\Users\\AKavalchuk\\keystore.jks')
+        }
+        release {
+            storeFile file('C:\\Users\\AKavalchuk\\keystore.jks')
+            storePassword 'mypasswd'
+            keyPassword 'mypasswd'
+            keyAlias = 'key0'
+        }
+    }
     compileSdkVersion 29
     defaultConfig {
         applicationId "com.example.app3"
-        minSdkVersion 26
+        minSdkVersion 23
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -23,6 +41,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
 }

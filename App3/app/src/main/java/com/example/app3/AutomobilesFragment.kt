@@ -38,15 +38,13 @@ class AutomobilesFragment: Fragment(), Injectable {
         }
         remove_selected_button.setOnClickListener {
             Shared.automobiles = Shared.automobiles.filter { automobile -> !automobile.isSelected } as ArrayList<Automobile>
-            automobilesAdapter!!.notifyDataSetChanged()
+            viewModel.fetchAutomobiles()
+            observeAutomobiles()
         }
         add_new_button.setOnClickListener {
             val intent = Intent(it.context, AddAutomobileActivity::class.java)
             startActivity(intent)
         }
-
-        viewModel.fetchAutomobiles()
-        observeAutomobiles()
     }
 
     private fun observeAutomobiles() {
@@ -69,7 +67,8 @@ class AutomobilesFragment: Fragment(), Injectable {
 
     override fun onResume() {
         super.onResume()
-        automobilesAdapter!!.notifyDataSetChanged()
+        viewModel.fetchAutomobiles()
+        observeAutomobiles()
 
     }
 

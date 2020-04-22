@@ -26,9 +26,9 @@ class AddAutomobileFragment(activity: MainActivity): Fragment() {
 
         add_automobile.setOnClickListener {
             AlertDialog.Builder(activity)
-                .setTitle("Title")
+                .setTitle("New auto")
                 .setMessage("Add automobile?")
-                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setIcon(android.R.drawable.btn_radio)
                 .setPositiveButton("yes") { _: DialogInterface, _: Int ->
                     Shared.automobiles.add(Automobile(producer.text.toString(), name.text.toString(), price.text.toString()))
                     this.activity!!.supportFragmentManager.beginTransaction()

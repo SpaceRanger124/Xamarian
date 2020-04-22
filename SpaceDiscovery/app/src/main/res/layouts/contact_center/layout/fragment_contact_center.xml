@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/system_background">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="@color/colorYellowDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Space Discovery" />
+
+    <Button
+            android:id="@+id/report_a_problem"
+            android:text="Report a problem"
+            android:textColor="@color/colorYellow"
+            android:textSize="20dp"
+            android:textStyle=""
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/system_button_selector"
+            app:layout_constraintTop_toTopOf="parent" />
+    <Button
+            android:id="@+id/proposals_and_suggestions"
+            android:text="Proposals and suggestions"
+            android:textColor="@color/colorYellow"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/system_button_selector"
+            app:layout_constraintTop_toBottomOf="@id/report_a_problem" />
+
+    <Button
+            android:id="@+id/leave_feedback"
+            android:text="Leave feedback"
+            android:textColor="@color/colorYellow"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/system_button_selector"
+            app:layout_constraintTop_toBottomOf="@id/proposals_and_suggestions" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

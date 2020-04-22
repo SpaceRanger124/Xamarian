@@ -23,11 +23,17 @@ class SelectedAutomobilesFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        selectedAutomobilesAdapter = SelectedAutomobilesAdapter()
+        selectedAutomobilesAdapter = SelectedAutomobilesAdapter(Shared.getSelectedAutomobiles() )
         selected_automobiles_list.apply {
             layoutManager = LinearLayoutManager(view.context)
             adapter = selectedAutomobilesAdapter
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        println("selected automobiles resume")
+        selectedAutomobilesAdapter!!.updateAutomobiles(Shared.getSelectedAutomobiles())
     }
 
 }

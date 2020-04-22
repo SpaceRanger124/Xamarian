@@ -42,7 +42,6 @@ class AutomobilesFragment: Fragment() {
     override fun onResume() {
         super.onResume()
         automobilesAdapter!!.notifyDataSetChanged()
-
     }
 
 }

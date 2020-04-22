@@ -13,8 +13,11 @@ class Shared {
 
         var messages = ""
 
-        fun getSelectedAutomobiles(): List<SelectedAutomobile> {
-            return automobiles.groupBy { it.producer }
+        fun getSelectedAutomobiles(): ArrayList<SelectedAutomobile> {
+            automobiles.forEach {
+                println(it.name)
+            }
+            return ArrayList(automobiles.groupBy { it.producer }
                 .map {
                     SelectedAutomobile(
                         it.key,
@@ -22,7 +25,7 @@ class Shared {
                             it.name
                         }.reduce { acc, s ->  acc + "\n" + s }
                     )
-                }
+                })
         }
 
     }

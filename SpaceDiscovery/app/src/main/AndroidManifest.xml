@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="alexcaywalt.magistracy.spacediscovery">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+            android:name=".ApplicationContext"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true">
+        <activity
+                android:name=".SidePane"
+                android:label="@string/title_activity_side_pane"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".main_functionality.stations.chat.ChatListActivity">
+        </activity>
+        <activity
+                android:name=".main_functionality.stations.chat.ChatActivity">
+        </activity>
+        <activity
+                android:name=".system_functionality.contact_center.SelectProblemActivity">
+        </activity>
+        <activity
+                android:name=".system_functionality.contact_center.MessageActivity">
+        </activity>
+        <activity
+                android:name=".system_functionality.contact_center.MessageSentActivity">
+        </activity>
+    </application>
+</manifest>

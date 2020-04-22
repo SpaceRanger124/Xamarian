@@ -5,16 +5,23 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.app2.Shared.Companion.getSelectedAutomobiles
 
-class SelectedAutomobilesAdapter: RecyclerView.Adapter<SelectedAutomobilesAdapter.AutomobilesViewHolder>() {
+class SelectedAutomobilesAdapter(var selectedAutomobiles: ArrayList<SelectedAutomobile>): RecyclerView.Adapter<SelectedAutomobilesAdapter.AutomobilesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = AutomobilesViewHolder(
         LayoutInflater.from(parent.context).inflate(R.layout.item_selected_automobile, parent, false)
     )
 
     override fun getItemCount(): Int {
-        return getSelectedAutomobiles().size
+        return selectedAutomobiles.size
+    }
+
+    fun updateAutomobiles(selectedAutomobilesNew: ArrayList<SelectedAutomobile>) {
+        selectedAutomobiles.clear()
+        selectedAutomobiles.addAll(selectedAutomobilesNew)
+        println("size: " + selectedAutomobiles.size)
+        notifyDataSetChanged()
+        println("itemCount: " + itemCount)
     }
 
     class AutomobilesViewHolder(view: View): RecyclerView.ViewHolder(view) {
@@ -25,8 +32,8 @@ class SelectedAutomobilesAdapter: RecyclerView.Adapter<SelectedAutomobilesAdapte
     }
 
     override fun onBindViewHolder(holder: AutomobilesViewHolder, position: Int) {
-        holder.producer.text = getSelectedAutomobiles()[position].producer
-        holder.automobiles.text = getSelectedAutomobiles()[position].automobiles
+        holder.producer.text = selectedAutomobiles[position].producer
+        holder.automobiles.text = selectedAutomobiles[position].automobiles
     }
 
 }
