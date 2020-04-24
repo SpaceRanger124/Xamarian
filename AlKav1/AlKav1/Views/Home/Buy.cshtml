@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Process order</title>
+</head>
+<body style="background:#dc9696;color:#000000">
+    <div>
+        <h3>Order form</h3>
+        <p><i>Fill in the following fields:</i></p>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.ConfectioneryId" name="ConfectioneryId" />
+            <table>
+                <tr>
+                    <td>User:</td>
+                    <td><input type="text" name="User" /> </td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" name="Address" /></td>
+                </tr>
+                <tr><td><input type="submit" value="Submit" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
